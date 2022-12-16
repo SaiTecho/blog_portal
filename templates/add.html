@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Add Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        textarea {
+          resize: none;
+        }
+    </style>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="container">
+    <h1 class="text-center" style="color:Black; font-style: oblique;">Add New Blog</h1>
+    <form method="post" action="/add_blog" style="background-color:rgb(228, 222, 222); padding:0 10px">
+        <div class="form-group">
+            <label><b>Title:</b></label>
+            <input type="text" class="form-control" placeholder="enter the title" name="titlename" required>
+        </div>
+        <div class="form-group">
+            <label><b>Enter Category:</b></label>
+            <input type="text" class="form-control" placeholder="enter the category" name="categoryname" required>
+        </div>
+        
+        <label><b>Enter the content:</b></label>   
+        <textarea rows="10" class="form-control"  name="content" required>  
+        </textarea>  
+        <br/>
+        <div class="form-group text-center">
+            <button class="btn btn-success btn-lg float-right " type="submit">
+                 Publish
+            </button>
+        </div>
+        <br/>
+    
+    </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

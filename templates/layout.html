@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        
+        <script src="https://cdn.jsdelivr.net/npm/jquery.fancytable/dist/fancyTable.min.js"></script>
+    <script src="/dist/fancyTable.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $("#example").fancyTable({
+          sortColumn:1,// column number for initial sorting
+          sortOrder:'descending',// 'desc', 'descending', 'asc', 'ascending', -1 (descending) and 1 (ascending)
+          pagination:true,// default: false
+          paginationClass: "btn btn-light",
+          paginationClassActive: "active",
+          perPage: 5,
+          searchable: false
+    
+        });
+    });
+    </script>
+    
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">The BloG House</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li ><a href="/blogs">Blogs</a></li>
+                <li ><a href="/add_blog">New Blog</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <!-- <li><a href="/register"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+                <li><a href="/logout"><span class="glyphicon glyphicon-log-in"></span> Logout</a></li>
+            </ul>
+          </div>
+          
+        </div>
+      </nav>
+        
+    
+    {% block content %}{% endblock %}
+    
+     
+  </body>
+  <style>
+
+    body{
+
+        background-image: url('./static/images/bgimg.jfif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+</style>
+</html>

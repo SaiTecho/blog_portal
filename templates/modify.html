@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Modify the Blog</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <style>
+        textarea {
+          resize: none;
+        }
+    </style>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="container">
+    <form method="post" action="/modify/{{postid}}">
+        <h3>{{title}}</h3>
+        <label><b>Enter the modify content:</b></label>
+           
+        <textarea rows="15" class="form-control" name="content" required>  
+      
+        </textarea>  
+        <br/>
+        <div class="form-group text-center">
+            <button class="btn btn-success btn-lg float-right" type="submit">
+                 Publish
+            </button>
+        </div>
+    
+    </form>
+    </div>
+    {% endblock %}
+</body>
+</html>

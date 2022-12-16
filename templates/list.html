@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Blogs Page</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    
+    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery.fancytable/dist/fancyTable.min.js"></script>
+    <script src="/dist/fancyTable.min.js"></script>
+    <script>
+        $(document).ready(function() {
+        $("#example").fancyTable({
+          sortColumn:1,// column number for initial sorting
+          sortOrder:'descending',// 'desc', 'descending', 'asc', 'ascending', -1 (descending) and 1 (ascending)
+          pagination:true,// default: false
+          paginationClass: "btn btn-light",
+          paginationClassActive: "active",
+          perPage: 5,
+          searchable: false
+    
+        });
+    });
+    </script> -->
+    <style>
+        #view{
+            text-decoration: none;
+            color:white;
+        }
+
+
+    </style>
+</head>
+<body>
+    {% extends "layout.html" %}
+    {% block content %}
+    <div class="container container-sm" style="height:80vh">
+        <table class = "table table-striped" id = "example" style="background-color: white;">
+            <thead>
+                <tr>
+                    <th> Blog Title</th>
+                    <th> Modified Date</th>
+                    <th>Category</th>
+                    <th> Check Article</th>
+                </tr>
+            </thead>
+
+            <tbody>
+            {% for i in final_data %}
+                <tr>
+                    <td>{{i[1]}}</td>
+                    <td>{{i[2]}}</td>
+                    <td>{{i[3]}}</td>
+                    <td><button type="button" class="btn btn-primary"><a id ="view" href="/blogs/{{i[0]}}">View</button></td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endblock %}
+</body>
+<style>
+
+    body{
+
+        background-image: url('./static/images/bgimg.jfif');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+</style>
+
+</html>
