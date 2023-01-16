@@ -12,4 +12,4 @@ TooLs :-
 1.Python Flask
 2.mysql
 3.html
-4.Bootstrap(CSS 1)
+4.Bootstrap
