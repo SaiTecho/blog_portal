@@ -9,7 +9,7 @@ running in local server using linux.
 
 TooLs :-
 
-1.Flask
+1.Python Flask
 2.mysql
 3.html
-4.Bootstrap
+4.Bootstrap(CSS 1)
