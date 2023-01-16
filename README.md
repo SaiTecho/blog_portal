@@ -5,7 +5,7 @@
 Created a blog portal (WEB) using python FLASK FrameWork and storing data in mysqldb.
 
 
-running in local server 
+running in local server using linux.
 
 TooLs :-
 
